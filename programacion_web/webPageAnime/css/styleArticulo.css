@@ -1,0 +1,18 @@
+#articulo{
+    text-align: left;
+    /*width: 750px;*/
+    /*margin: auto;*/
+}
+    
+#lateral{
+    width: 300px;  /*Este será el ancho que tendrá tu columna*/
+    background-color: #CCCCCC;  /*Aquí pon el color del fondo que quieras para este lateral*/
+    float:left; /*Aqui determinas de lado quieres quede esta "columna" */
+}
+    
+#principal{
+    margin-left:320px; /*Este margen hace que no se encime el contenido en tu menúlateral, es     importante que pongas un pocos pixeles más que el ancho  de tu columna lateral*/
+    background-color: #FFFFFF;
+    border:red 1px solid; /*ponemos un dorde para que se vea bonito*/
+}
+

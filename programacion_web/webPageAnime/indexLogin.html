@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styleLogin.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login-box">
+        <img src="img/login2.jpg" class="avatar" alt="Avatar Image">
+        <h1>Ingresar Usuario</h1>
+        <form>
+          <!-- USERNAME INPUT -->
+          <label for="username">Usuario</label>
+          <input name="usuario" id="usuario" class="usuario" type="text" placeholder="Enter Username">
+          <div id="mensaje1" class="errores">Debe completar el campo</div>
+          <!-- PASSWORD INPUT -->
+          <label for="password">Contraseña</label>
+          <input name="pass" id="pass" class="pass" type="password" placeholder="Enter Password">
+          <div id="mensaje2" class="errores">Debe completar el campo</div>
+
+          <input id="logear" type="submit" value="Log In" ><a href="menu.html"></a></input>
+
+          <a href="#">olvidates tu contraseña?</a><br>
+          <a href="#openModal">no tienes cuenta registrada?</a> <!--boton para entrar al modal-->
+        </form>
+      </div>
+
+      <!-- modal de registro-->
+      <div id="openModal" class="modalDialog" >
+          <div class="login-box">
+        <div>
+            <a href="#close" title="Close" class="close">X</a><!-- boton para cerrar el modal-->
+            <form id="form2"> 
+                <h1>Registro</h1>
+
+                <!-- En seguida de cada input se agregará un div con el mensaje de error-->
+                <p><label for="nombre">Nombre:</label></p>
+                <input name="nombre" type="text" id="nombre" class="nombre" placeholder="Pon tu nombre" autofocus="" ></p>
+                <div id="mensaje1" class="errores"> Ingresa solo caracteres</div>
+ 
+                <p><label for="apellidos">Apellidos:</label></p>
+                <input name="apellidos" type="text" id="apellidos" class="apellidos" placeholder="Pon tus apellidos" /></p>
+                <div id="mensaje2" class="errores"> Ingresa solo caracteres</div>
+
+                <p><label for="correo">Correo:</label></p>
+                <input name="correo" type="text" id="correo" class="correo" placeholder="Pon tu mail" /></p>
+                <div id="mensaje3" class="errores"> Mail no valido</div>
+ 
+                <p><label for="pass">Password:</label></p>
+                <input name="pass" type="password" id="pass" class="pass" placeholder="Pon tu contraseña" ></p>
+ 
+                <p><label for="repass">Repetir Password:</label></p>
+                <input name="repass" type="password" id="repass" class="repass" placeholder="Repite contraseña" /></p>
+ 
+                <p id="registrar"><input name="submit" type="submit" id="boton" value="Registrar" class="boton"/></p>
+            </form>    
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/loginScript.js"></script>
+</body>
+</html>

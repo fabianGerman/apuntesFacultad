@@ -1,0 +1,109 @@
+/*
+definiendo su posición, tamaño y un borde, 
+el cual servirá para visualizar el ítem del carrusel actual, 
+o el que tienen directamente de frente en un momento dado
+*/
+.container {
+    width: 210px;
+    height: 140px;
+    position: relative;
+    margin: 0 auto 40px;
+    border: 1px solid #CCC;
+    perspective: 1100px;
+    float: left;
+}
+
+/*
+Crearemos otro elemento dentro de nuestro .container 
+el cual permite que sus hijos (ítems) sean mostrados en un espacio 3D, 
+para esto es empleada la propiedad transform-style con el valor preserve-3d.
+<section class="container">
+    <div id="carousel" style="transform: translateZ(-288px) rotateY(-360deg);">
+     <!-- Elementos hijos 3D -->
+    </div>
+</section>
+*/
+#carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translateZ( -288px );
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    animation: rotateInY 10s infinite linear;
+}
+
+/*
+ personalizarlo tanto como gustes aunque esté pendiente con los 
+ márgenes y paddings para evitar que se descuadre o se solapen las cartas o items entre si 
+*/
+#carousel figure {
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 10px;
+    top: 10px;
+    line-height: 116px;
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+/*
+Se debe ubicar cada uno de los ítems de nuestro carrusel de tal manera que no se solapen 
+alterando su posición en el eje de las Y en los 360 grados; 
+aquí tendrás tantas de estas reglas como ítems tenga o conformen tu carrusel
+*/
+#carousel figure:nth-child(1) {
+    transform: rotateY( 0deg ) translateZ( 288px );
+}
+
+#carousel figure:nth-child(2) {
+    transform: rotateY( 40deg ) translateZ( 288px );
+}
+
+#carousel figure:nth-child(3) {
+    transform: rotateY( 80deg ) translateZ( 288px );
+}
+
+#carousel figure:nth-child(4) {
+    transform: rotateY( 120deg ) translateZ( 288px );
+}
+
+#carousel figure:nth-child(5) {
+    transform: rotateY( 160deg ) translateZ( 288px );
+}
+
+#carousel figure:nth-child(6) {
+    transform: rotateY( 200deg ) translateZ( 288px );
+}
+
+#carousel figure:nth-child(7) {
+    transform: rotateY( 240deg ) translateZ( 288px );
+}
+
+#carousel figure:nth-child(8) {
+    transform: rotateY( 280deg ) translateZ( 288px );
+}
+
+#carousel figure:nth-child(9) {
+    transform: rotateY( 320deg ) translateZ( 288px );
+}
+
+/*
+Si queremos que rote automáticamente con las Animaciones en CSS, podemos emplear las siguientes:
+*/
+@keyframes rotateInY {
+    0%   { transform: translateZ(-288px) rotateY(0deg);   }
+    100% { transform: translateZ(-288px) rotateY(360deg);    }
+}
+
+.imagenes{
+    width: 200px;
+    height: 200px;
+}
+
+
